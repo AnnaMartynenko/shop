@@ -1,0 +1,10 @@
+<h1>{{name}}</h1>
+<h2>{{category}}</h2>
+<div>{{description}}</div>
+<ul>
+    <li  *ngFor="let feature of features">
+    {{feature}}
+    </li>
+</ul>
+<div>{{price | number:'.0-2'}} $</div>
+<button [disabled]="! isAvailable">buy</button>
