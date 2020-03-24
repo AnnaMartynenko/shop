@@ -1,1 +1,11 @@
-<p>product works!</p>
+<h2>{{product.name}} Details</h2>
+<div><span>id: </span>{{product.id}}</div>
+<div><span>name: </span>{{product.name}}</div>
+<button (click)="onBuy()">Buy</button>
+
+<h2>{{product.name | uppercase}} Details</h2>
+<div>
+  <label>name:
+    <input [(ngModel)]="product.name" placeholder="name"/>
+  </label>
+</div>

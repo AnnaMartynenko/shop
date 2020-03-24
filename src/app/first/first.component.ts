@@ -27,6 +27,10 @@ import { Input } from '@angular/core';
         this.price = 2.3888;
         this.isAvailable = true;
     }
+
+    onBuy(): void {
+      console.log('Good choice!' );
+    }
   
   }
   enum Category

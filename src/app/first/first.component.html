@@ -7,4 +7,4 @@
     </li>
 </ul>
 <div>{{price | number:'.0-2'}} $</div>
-<button [disabled]="! isAvailable">buy</button>
+<button (click)="onBuy()" [disabled]="! isAvailable">Buy now!</button>
