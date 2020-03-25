@@ -13,8 +13,8 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onBuy(): void {
-    console.log('Congratulations! You bought a very good product.' );
+  onBuy (product): void {
+    console.log('Congratulations! You bought ' + product.name + ' for a very good price ' + product.price + ' $' );
   }
 
 }

@@ -1,8 +1,8 @@
-<div>
-    <ul class="products">
-        <li *ngFor="let product of products">
-          <span>{{product.id}}</span> {{product.name}}
-        </li>
-      </ul>
-</div>
-<button (click)="onBuy()">Buy</button>
+<ul class="products">
+  <li *ngFor="let product of products">
+    <h2>{{product.name}} </h2>
+    <span>{{product.description}}</span>   
+    <span>{{product.price | number:'.0-2'}} $</span>         
+    <button [disabled]="! product.isAvailable" (click)="onBuy(product)">Buy</button>
+  </li>
+</ul>
