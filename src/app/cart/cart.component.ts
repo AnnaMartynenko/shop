@@ -11,28 +11,19 @@ import { Subscription } from 'rxjs';
 export class CartComponent implements OnInit {
   private sub :Subscription;
   public selectedProducts: Array<ProductModel>;
-  productsArePresent: boolean;
 
   constructor(public cartServiceService: CartService){
   }
 
   ngOnInit(): void {
+    this.selectedProducts = new Array<ProductModel> ();
     console.log ('subscribe');   
-    this.sub = this.cartServiceService.channel$.subscribe(this.updateCart);
+    this.sub = this.cartServiceService.channel$.subscribe(product =>{
+      this.selectedProducts.push(product);
+    });
   }
 
   onDestroy(){
     this.sub.unsubscribe();
   }
-
-  public updateCart(product: ProductModel)
-  {    
-    this.productsArePresent = true;
-    if (this.selectedProducts==null)
-    {
-      this.selectedProducts = new Array<ProductModel> ();
-    }
-    this.selectedProducts.push(product);
-  }
-
 }

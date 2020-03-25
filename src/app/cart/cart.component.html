@@ -1,9 +1,13 @@
-<h1>Your cart:</h1>
-<div *ngIf="productsArePresent" >
-<ul >
-    <li *ngFor="let product of selectedProducts">
-      <span>{{product.name}} </span>
-      <span>{{product.price | number:'.0-2'}} $</span>         
-    </li>
-  </ul>
-</div>
+<ng-template [ngIf]="selectedProducts.length > 0" [ngIfElse]="emptyCart">  
+  <h1>Your cart:</h1>
+  <ul>
+  <li *ngFor="let product of selectedProducts">
+    <span>{{product.name}} </span>
+    <span>{{product.price | number:'.0-2'}} $</span>         
+  </li>
+</ul>
+</ng-template>
+<ng-template #emptyCart>
+  <h1>Your cart is empty</h1>
+</ng-template>
+
