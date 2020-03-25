@@ -7,12 +7,14 @@ import { PRODUCTS } from '../mock-products';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  
   products = PRODUCTS;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
   onBuy (product): void {
     console.log('Congratulations! You bought ' + product.name + ' for a very good price ' + product.price + ' $' );
   }

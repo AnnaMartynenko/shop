@@ -1,1 +1,8 @@
-<p>product-list works!</p>
+<ul class="products">
+    <li *ngFor="let product of products">
+      <h2>{{product.name}} </h2>
+      <div>{{product.description}}</div>   
+      <div>{{product.price | number:'.0-2'}} $</div>         
+      <button [disabled]="! product.isAvailable" (click)="onBuy(product)">Buy</button>
+    </li>
+  </ul>

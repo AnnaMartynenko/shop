@@ -1,0 +1,9 @@
+<h1>Your cart:</h1>
+<div *ngIf="productsArePresent" >
+<ul >
+    <li *ngFor="let product of selectedProducts">
+      <span>{{product.name}} </span>
+      <span>{{product.price | number:'.0-2'}} $</span>         
+    </li>
+  </ul>
+</div>
