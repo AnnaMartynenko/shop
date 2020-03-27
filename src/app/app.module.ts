@@ -16,7 +16,7 @@ import { CartComponent } from './cart/cart.component';
     ProductComponent,
     ProductListComponent,
     CartComponent
-  ],  
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -26,3 +26,7 @@ import { CartComponent } from './cart/cart.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// надо навести порядок в корневой папке приложения, там должен быть только корневой модуль и корневой компонент
+//
+// линтинг выдает очень много ошибок, их надо все исправить
+//
