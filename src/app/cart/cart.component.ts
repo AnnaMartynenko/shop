@@ -9,21 +9,21 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  private sub :Subscription;
+  private sub: Subscription;
   public selectedProducts: Array<ProductModel>;
 
-  constructor(public cartServiceService: CartService){
+  constructor(public cartServiceService: CartService) {
   }
 
   ngOnInit(): void {
     this.selectedProducts = new Array<ProductModel> ();
-    console.log ('subscribe');   
-    this.sub = this.cartServiceService.channel$.subscribe(product =>{
+    console.log ('subscribe');
+    this.sub = this.cartServiceService.channel$.subscribe(product => {
       this.selectedProducts.push(product);
     });
   }
 
-  onDestroy(){
+  onDestroy() {
     this.sub.unsubscribe();
   }
 }

@@ -5,10 +5,10 @@ import { PRODUCTS } from './mock-products';
   providedIn: 'root'
 })
 export class ProductsService {
-  private products = PRODUCTS; 
+  private products = PRODUCTS;
 
   constructor() { }
-  
+
   getProducts() {
     return this.products;
    }
