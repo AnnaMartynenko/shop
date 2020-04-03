@@ -16,7 +16,7 @@ import { CartComponent } from './cart/cart.component';
     ProductComponent,
     ProductListComponent,
     CartComponent
-  ],  
+  ],
   imports: [
     BrowserModule,
     FormsModule,
