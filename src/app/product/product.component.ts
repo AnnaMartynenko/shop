@@ -16,6 +16,7 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // надо укзаать тип для параметра
   onBuy(product: ProductModel): void {
     console.log('Congratulations! You bought ' + product.name + ' for a very good price ' + product.price + ' $' );
   }

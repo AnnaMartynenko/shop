@@ -7,7 +7,7 @@ import { CartService } from '../cart.service';
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
-  providers: [ProductsService]
+  // providers: [ProductsService] сервис уже зарегистрирован в собственном декораторе
 })
 export class ProductListComponent implements OnInit {
 
